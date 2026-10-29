@@ -82,7 +82,7 @@ import pandas as pd
 import joblib
 
 # 1. Set up the UI layout
-st.set_page_config(page_title="Razorpay Fraud Engine", layout="wide")
+st.set_page_config(page_title="Enterprise Fraud Detector", layout="wide")
 st.title("🛡️ Enterprise Procurement Fraud Detector")
 st.write("Upload a CSV of processed invoices to instantly scan for anomalies.")
 
