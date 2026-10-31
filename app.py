@@ -33,13 +33,16 @@ We have hosted sample data: 300,000 rows from the synthetic Procurement Invoice 
 """)
 
 sample_data_url = "https://drive.google.com/file/d/1dPG7jN8IlXphkk7VStX0m4gk8navzsIK/view?usp=drive_link"
-
+with open("sample_invoices_2000.csv", "rb") as f:
+    st.download_button("📥 Download 2,000-row sample (quick test)", f,
+                        file_name="sample_invoices_2000.csv", mime="text/csv")
+    
 st.link_button(
     label="📥 Download 300MB Sample Invoice Dataset (External Cloud)", 
     url=sample_data_url,
     use_container_width=False
 )
-st.caption("Instructions: Click the button above to download the CSV from our cloud storage, then drop it into the file upload zone above.")
+st.caption("Quick test: download the 2,000-row sample above and drop it into the upload zone. For a full-scale test, use the 300MB external dataset.")
 
 
 
