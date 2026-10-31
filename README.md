@@ -5,7 +5,7 @@
 An end-to-end machine learning pipeline built to detect procurement fraud and anomalous invoice submissions. 
 
 ## Architecture
-* **Supervised Engine**: XGBoost Classifier tuned via RandomizedSearchCV to catch known fraud patterns, tuned via RandomizedSearchCV for high recall on known fraud patterns..
+* **Supervised Engine**: XGBoost classifier tuned via RandomizedSearchCV for high recall on known fraud patterns.
 * **Unsupervised Safety Net**: Isolation Forest algorithm deployed as a "Strict Hybrid Mode" toggle to catch anomalies and data patterns that bypass standard probability thresholds.
 * **Frontend**: Interactive Streamlit dashboard allowing business users to process batch invoices (up to 300,000 rows locally) and isolate blocked threats instantly.
 

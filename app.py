@@ -21,7 +21,7 @@ st.markdown("### System Settings")
 use_hybrid = st.toggle("🚨 Activate Strict Hybrid Mode (XGBoost + Isolation Forest)", value=False)
 st.caption("When activated, the system casts a wider net but adds false alarms (in testing: +23 frauds caught, about +1,300 false alarms).")
 
-# 4. Create the file upload button
+
 # 4. Create the file upload button
 uploaded_file = st.file_uploader("Upload Raw Invoice Data (CSV)", type="csv")
 
