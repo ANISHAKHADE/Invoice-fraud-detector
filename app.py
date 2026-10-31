@@ -19,7 +19,7 @@ xgb_model, iso_model = load_models()
 # 3. Create the UI Controls
 st.markdown("### System Settings")
 use_hybrid = st.toggle("🚨 Activate Strict Hybrid Mode (XGBoost + Isolation Forest)", value=False)
-st.caption("When activated, the system casts a wider net to catch Zero-Day anomalies, but may increase False Positives.")
+st.caption("When activated, the system casts a wider net but adds false alarms (in testing: +23 frauds caught, about +1,300 false alarms).")
 
 # 4. Create the file upload button
 # 4. Create the file upload button
@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("Upload Raw Invoice Data (CSV)", type="csv")
 st.markdown("""
 💡 **Don't have a dataset to test?**  
 Since corporate invoice logs contain sensitive information, public datasets are rare. 
-We have hosted an Sample data: 300,000 rows from the synthetic Procurement Invoice Fraud Dataset on Kaggle to test this engine's capabilities.
+We have hosted sample data: 300,000 rows from the synthetic Procurement Invoice Fraud Dataset on Kaggle to test this engine's capabilities.
 """)
 
 sample_data_url = "https://drive.google.com/file/d/1dPG7jN8IlXphkk7VStX0m4gk8navzsIK/view?usp=drive_link"
