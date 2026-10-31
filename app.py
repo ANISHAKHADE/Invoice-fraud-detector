@@ -29,7 +29,7 @@ uploaded_file = st.file_uploader("Upload Raw Invoice Data (CSV)", type="csv")
 st.markdown("""
 💡 **Don't have a dataset to test?**  
 Since corporate invoice logs contain sensitive information, public datasets are rare. 
-We have hosted an anonymized, production-scale sample dataset containing over 300,000 rows to test this engine's capabilities.
+We have hosted an Sample data: 300,000 rows from the synthetic Procurement Invoice Fraud Dataset on Kaggle to test this engine's capabilities.
 """)
 
 sample_data_url = "https://drive.google.com/file/d/1dPG7jN8IlXphkk7VStX0m4gk8navzsIK/view?usp=drive_link"
