@@ -5,7 +5,7 @@
 An end-to-end machine learning pipeline built to detect procurement fraud and anomalous invoice submissions. 
 
 ## Architecture
-* **Supervised Engine**: XGBoost Classifier tuned via RandomizedSearchCV to catch known fraud patterns, optimized for a strict business threshold (30% probability) to balance False Positives and False Negatives.
+* **Supervised Engine**: XGBoost Classifier tuned via RandomizedSearchCV to catch known fraud patterns, tuned via RandomizedSearchCV for high recall on known fraud patterns..
 * **Unsupervised Safety Net**: Isolation Forest algorithm deployed as a "Strict Hybrid Mode" toggle to catch anomalies and data patterns that bypass standard probability thresholds.
 * **Frontend**: Interactive Streamlit dashboard allowing business users to process batch invoices (up to 300,000 rows locally) and isolate blocked threats instantly.
 
@@ -21,11 +21,11 @@ An end-to-end machine learning pipeline built to detect procurement fraud and an
 * **Language/Libraries:** Python, pandas, scikit-learn, XGBoost, joblib
 * **Deployment:** Streamlit, Git
 
-   ## Results (60,000-invoice held-out test set, synthetic Kaggle data)
-   |           Mode              | Precision | Recall | False alarms |
-   | --------------------------- | --------- | ------ | ------------ |
-   | XGBoost only (default)      | 97.7%     | 93.1%  |    288       |
-   | Hybrid (+ Isolation Forest) | 88.7%     | 93.3%  |   1,588      |
+## Results (60,000-invoice held-out test set, synthetic Kaggle data)
+|           Mode              | Precision | Recall | False alarms |
+| --------------------------- | --------- | ------ | ------------ |
+| XGBoost only (default)      | 97.7%     | 93.1%  |    288       |
+| Hybrid (+ Isolation Forest) | 88.7%     | 93.3%  |   1,588      |
 
-   The hybrid mode catches 23 more fraud cases but adds ~1,300 false alarms, so it is off by default.
-   Best single rule (split-invoice flag): 62.8% recall. XGBoost ROC-AUC: 0.962.
+The hybrid mode catches 23 more fraud cases but adds ~1,300 false alarms, so it is off by default.
+Best single rule (split-invoice flag): 62.8% recall. XGBoost ROC-AUC: 0.962.
