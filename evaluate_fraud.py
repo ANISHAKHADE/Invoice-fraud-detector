@@ -4,7 +4,7 @@ Run this in the SAME folder as ml_ready_data.csv, fraud_model.pkl and isolation_
     python evaluate_fraud.py
 
 It rebuilds the exact same 80/20 split as train_model.py (random_state=42) and prints
-XGBoost-only, Isolation-Forest-only and Hybrid metrics. Paste the full output back to Claude.
+XGBoost-only, Isolation-Forest-only and Hybrid metrics.
 """
 import time, joblib, pandas as pd, numpy as np
 from sklearn.model_selection import train_test_split
